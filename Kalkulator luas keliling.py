@@ -1,4 +1,5 @@
 import os
+import math
 
 while True:
     print("\n")
@@ -106,9 +107,11 @@ while True:
             v = (input("Masukan pilihan anda : "))
             if v == "1":
                 os.system('cls')
-                alas = int(input("Masukan alas segitiga : "))
-                tinggi = int(input("Masukan tinggi segitiga : "))
-                hasil = 1/2 * alas * tinggi
+                sisi_1 = int(input("Masukan sisi pertama segitiga : "))
+                sisi_2= int(input("Masukan sisi kedua segitiga : "))
+                sisi_3 = int(input("Masukan sisi ketiga segitiga : "))
+                s = (sisi_1 + sisi_2 + sisi_3) / 2
+                hasil = math.sqrt(s*(s - sisi_1)*(s - sisi_2)*(s - sisi_3))
                 print("="*30)
                 print(f"hasil anda adalah = {int(hasil)}")
                 print("-"*30)
